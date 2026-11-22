@@ -769,6 +769,26 @@ p {
   color: var(--ink-3);
 }
 
+.certs a {
+  align-self: flex-start;
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.certs a:hover,
+.certs a:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+.certs a span {
+  color: inherit;
+  font-size: inherit;
+}
+
 /* ---------- Contact ---------- */
 .contact {
   display: grid;
