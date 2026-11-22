@@ -61,7 +61,7 @@ chips.forEach((chip) =>
 );
 
 // ---------- Reveal on scroll ----------
-const revealTargets = document.querySelectorAll(".section__head, .project, .timeline, .skill-group, .certs, .contact");
+const revealTargets = document.querySelectorAll(".section__head, .project, .timeline, .skill-group, .certs, .cert, .contact");
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver(
     (entries) =>
@@ -90,4 +90,5 @@ if (resumeLinks.length) {
 }
 
 // ---------- Footer year ----------
-document.querySelector("[data-year]").textContent = new Date().getFullYear();
+const year = document.querySelector("[data-year]");
+if (year) year.textContent = new Date().getFullYear();
